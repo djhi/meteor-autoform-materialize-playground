@@ -1,0 +1,22 @@
+<head>
+  <title>autoform-materialize-tests</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  <div class="container">
+    {{> hello}}
+  </div>
+</body>
+
+<template name="hello">
+  {{>quickForm id="testForm" type="normal" schema=Schemas.FieldsExamples}}
+
+  {{#afModal classes="btn" collection="Contacts" operation="insert" title="Create a new contact" buttonClasses="btn light-green accent-4" buttonContent="Please add this one"}}
+    Add a new contact
+  {{/afModal}}
+
+
+  {{>autoformModals}}
+</template>
