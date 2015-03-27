@@ -3,7 +3,9 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div class="container">
+    <h1>Welcome to Meteor!</h1>
+  </div>
 
   <div class="container">
     {{> hello}}
@@ -11,13 +13,17 @@
 </body>
 
 <template name="hello">
+  <h2>Sample Quickform</h2>
   {{>quickForm id="testForm" type="normal" schema=Schemas.FieldsExamples}}
+
+  <h2>Sample Autoform</h2>
   {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact}}
     {{>afQuickField name="name"}}
     {{>afQuickField name="title"}}
     {{>afQuickField name="phone"}}
   {{/autoForm}}
 
+  <h2>Sample Autoform Modals</h2>  
   {{#afModal classes="btn" collection="Contacts" operation="insert" title="Create a new contact" buttonClasses="btn light-green accent-4" buttonContent="Please add this one"}}
     Add a new contact
   {{/afModal}}
