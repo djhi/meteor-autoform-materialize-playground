@@ -12,6 +12,11 @@
 
 <template name="hello">
   {{>quickForm id="testForm" type="normal" schema=Schemas.FieldsExamples}}
+  {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact}}
+    {{>afQuickField name="name"}}
+    {{>afQuickField name="title"}}
+    {{>afQuickField name="phone"}}
+  {{/autoForm}}
 
   {{#afModal classes="btn" collection="Contacts" operation="insert" title="Create a new contact" buttonClasses="btn light-green accent-4" buttonContent="Please add this one"}}
     Add a new contact

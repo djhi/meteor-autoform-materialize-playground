@@ -40,7 +40,7 @@ Schemas.Contact = new SimpleSchema({
     autoform: {
       options: 'allowed'
     }
-  },  
+  },
   phone: {
     type: String
   }
@@ -86,7 +86,7 @@ if (Meteor.isClient) {
     return Schemas;
   });
 
-  AutoForm.addHooks('testForm',  {
+  AutoForm.addHooks(null,  {
     formToDoc: function(doc) {
       console.log(doc);
       return doc;
