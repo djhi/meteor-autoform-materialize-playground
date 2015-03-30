@@ -43,6 +43,20 @@ Schemas.Contact = new SimpleSchema({
   },
   phone: {
     type: String
+  },
+  language: {
+    type: String,
+    optional: true,
+    //label: function () { return TAPi18n.__("Language") },
+    allowedValues: ['en', 'es'],
+    autoform: {
+      options: function () {
+        return [
+          { label: 'English', value: 'en' },
+          { label: 'Español', value: 'es' }
+        ]
+      }
+    }
   }
 });
 Schemas.FieldsExamples = new SimpleSchema({
