@@ -44,10 +44,13 @@ Schemas.Contact = new SimpleSchema({
   phone: {
     type: String
   },
+  emails: {
+    type: [String],
+    regEx: SimpleSchema.RegEx.Email
+  },
   language: {
     type: String,
     optional: true,
-    //label: function () { return TAPi18n.__("Language") },
     allowedValues: ['en', 'es'],
     autoform: {
       options: function () {
