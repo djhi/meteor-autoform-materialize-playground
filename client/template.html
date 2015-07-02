@@ -3,10 +3,17 @@
   {{>quickForm id="testForm" type="normal" schema=Schemas.FieldsExamples}}
 
   <h2>Sample Autoform</h2>
+  {{#autoForm id="testForm2" type="normal" schema=Schemas.FieldsExamples}}
+    {{>afQuickField name="name" value="A default value to test active on label"}}
+    {{>afQuickField name="nameDisabled" disabled="true" value="foo"}}
+  {{/autoForm}}
+
+  <h2>Sample Autoform</h2>
   {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact}}
     {{>afQuickField name="isHuman"}}
     {{>afQuickField name="name" value="A default value to test active on label"}}
     {{>afQuickField name="title"}}
+    {{>afQuickField name="description"}}
     {{>afQuickField name="phone"}}
     {{>afQuickField name="emails"}}
     {{>afQuickField name="language"}}

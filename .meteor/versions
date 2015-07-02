@@ -16,7 +16,7 @@ deps@1.0.7
 ejson@1.0.6
 fastclick@1.0.3
 geojson-utils@1.0.3
-gildaspk:autoform-materialize@0.0.19
+gildaspk:autoform-materialize@0.0.20
 gildaspk:autoform-medium@0.0.4
 gildaspk:autoform-modals-materialize@0.0.6
 grigio:babel@0.0.14

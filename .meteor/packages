@@ -13,7 +13,7 @@ aldeed:simple-schema@1.3.1
 aldeed:collection2@2.3.2
 aldeed:autoform@5.0.2
 materialize:materialize
-gildaspk:autoform-materialize@0.0.19
+gildaspk:autoform-materialize@0.0.20
 gildaspk:autoform-modals-materialize
 mediumeditor:mediumeditor
 gildaspk:autoform-medium@0.0.4

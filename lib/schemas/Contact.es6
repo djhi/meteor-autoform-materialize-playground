@@ -7,6 +7,8 @@ Schemas.Contact = new SimpleSchema({
         autoform: {
             label: false,
             type: 'boolean-radios',
+            falseLabel: "not human",
+            trueLabel: "human"
         },
     },
     title: {
