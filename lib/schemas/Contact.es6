@@ -1,0 +1,50 @@
+Schemas.Contact = new SimpleSchema({
+    name: {
+        type: String,
+    },
+    isHuman: {
+        type: Boolean,
+        autoform: {
+            label: false,
+            type: 'boolean-radios',
+        },
+    },
+    title: {
+        type: String,
+        allowedValues: ['Miss', 'Mrs', 'Mr'],
+        autoform: {
+            options: 'allowed',
+            skipLabel: true
+        },
+    },
+    description: {
+        type: String,
+        autoform: {
+            type: "medium",
+            mediumOptions: {
+                //keepLabel: true,
+            },
+        },
+    },
+    phone: {
+        type: String,
+    },
+    emails: {
+        type: [String],
+        regEx: SimpleSchema.RegEx.Email,
+    },
+    language: {
+        type: String,
+        optional: true,
+        allowedValues: ['en', 'es'],
+        autoform: {
+            options: () => [{
+                label: 'English',
+                value: 'en',
+            }, {
+                label: 'Español',
+                value: 'es',
+            },]
+        },
+    },
+});

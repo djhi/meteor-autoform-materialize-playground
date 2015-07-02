@@ -1,24 +1,11 @@
-<head>
-  <title>autoform-materialize-tests</title>
-</head>
-
-<body>
-  <div class="container">
-    <h1>Welcome to Meteor!</h1>
-  </div>
-
-  <div class="container">
-    {{> hello}}
-  </div>
-</body>
-
-<template name="hello">
+<template name="template">
   <h2>Sample Quickform</h2>
   {{>quickForm id="testForm" type="normal" schema=Schemas.FieldsExamples}}
 
   <h2>Sample Autoform</h2>
   {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact}}
-    {{>afQuickField name="name"}}
+    {{>afQuickField name="isHuman"}}
+    {{>afQuickField name="name" value="A default value to test active on label"}}
     {{>afQuickField name="title"}}
     {{>afQuickField name="phone"}}
     {{>afQuickField name="emails"}}
