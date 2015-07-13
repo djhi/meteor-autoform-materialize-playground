@@ -19,14 +19,10 @@ Schemas.FieldsExamples = new SimpleSchema({
     title: {
         type: String,
         allowedValues: ['Miss', 'Mrs', 'Mr'],
-    },
-    title3: {
-        label: 'Test for issue #23',
-        type: String,
-        allowedValues: ['Miss', 'Mrs', 'Mr'],
+        // This is needed for AutoForm.getInputType to return select and not text
         autoform: {
-            type: 'select-radio-inline',
-        }
+            options: 'allowed',
+        },
     },
     title2: {
         label: 'Test for issue #34',
@@ -36,6 +32,14 @@ Schemas.FieldsExamples = new SimpleSchema({
             firstOption: 'Choose a title',
             options: 'allowed',
         },
+    },
+    title3: {
+        label: 'Test for issue #23',
+        type: String,
+        allowedValues: ['Miss', 'Mrs', 'Mr'],
+        autoform: {
+            type: 'select-radio-inline',
+        }
     },
     description: {
         type: String,
