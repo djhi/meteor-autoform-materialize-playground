@@ -1,6 +1,16 @@
+Session.set("doc", {
+    title: 'Miss',
+    isHuman: true,
+    checkboxes: 'Miss'
+});
+
 Template.registerHelper('Schemas', () => {
     return Schemas;
 });
+
+Template.template.helpers({
+    doc: () => Session.get("doc")
+})
 
 AutoForm.addHooks(null, {
     formToDoc: (doc) => {
@@ -9,7 +19,6 @@ AutoForm.addHooks(null, {
     onError: (operation, error) => {
         if (error) {
             console.log(error);
-            alert('Dang, error: ' + error.message);
         }
     },
     onSuccess: () => {

@@ -19,6 +19,16 @@ Schemas.Contact = new SimpleSchema({
             skipLabel: true
         },
     },
+    checkboxes: {
+        label: 'Test for issue #49',
+        type: String,
+        allowedValues: ['Miss', 'Mrs', 'Mr'],
+        autoform: {
+            type: 'select-checkbox',
+            options: 'allowed',
+        }
+    },
+
     description: {
         type: String,
         autoform: {

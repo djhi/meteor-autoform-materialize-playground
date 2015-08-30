@@ -10,10 +10,11 @@
   {{/autoForm}}
 
   <h2>Sample Autoform 2</h2>
-  {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact}}
+  {{#autoForm id="testForm2" type="normal" schema=Schemas.Contact doc=doc}}
     {{>afQuickField name="isHuman"}}
     {{>afQuickField name="name" value="A default value to test active on label"}}
     {{>afQuickField name="title"}}
+    {{>afQuickField name="checkboxes"}}
     {{>afQuickField name="description"}}
     {{>afQuickField name="phone"}}
     {{>afQuickField name="emails"}}
